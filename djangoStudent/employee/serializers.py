@@ -18,7 +18,7 @@ class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     class Meta:
         model = Department
-        fields = ['pk','name']
+        fields = ['id','name','manager']
 
 
 class DepartmentViewSet(viewsets.ModelViewSet):
