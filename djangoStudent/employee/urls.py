@@ -9,9 +9,9 @@ router.register(r'employee', EmployeeViewSet)
 router.register(r'department', DepartmentViewSet)
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
-    url(r'^employee/$', views.employee_detail, name='employee'),
-    url(r'^employee/(?P<pk>[0-9]+)/$', views.employee_detail,name='employee-detail'),
-    url(r'^department/$', views.department_detail, name='department'),
-    url(r'^department/(?P<pk>[0-9]+)/$', views.department_detail,name='department-detail'),
+    url('', include(router.urls)),
+    url('employee/', views.employee_detail, name='employee'),
+    url('employee/<pk>/', views.employee_detail,name='employee-detail'),
+    url('department/', views.department_detail, name='department'),
+    url('department/<pk>', views.department_detail,name='department-detail'),
 ]
